@@ -1,234 +1,207 @@
-import { motion } from "framer-motion";
-import { Linkedin, Mail, Phone, FileText } from "lucide-react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ahmed Yasser — AI & ML Engineer</title>
+  <meta name="description" content="Portfolio of Ahmed Yasser, an AI & ML Engineer specializing in deep learning, computer vision, and natural language processing." />
+  <meta name="theme-color" content="#0ea5e9" />
 
-export default function AhmedYasserPortfolio() {
-  const photoUrl = "/avatar.jpg"; // 👉 put Ahmed Yasser's photo in /public folder as avatar.jpg
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ahmed Yasser — AI & ML Engineer">
+  <meta property="og:description" content="AI, ML, DL, and Generative AI projects.">
+  <meta property="og:type" content="website">
 
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white">
-      {/* Header */}
-      <header className="flex flex-col items-center text-center py-12">
-        <motion.img
-          src={photoUrl}
-          alt="Ahmed Yasser"
-          className="w-40 h-40 rounded-full border-4 border-cyan-400 shadow-lg"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.6 }}
-        />
-        <h1 className="mt-6 text-4xl font-bold tracking-wide">
-          Ahmed Yasser Shehata Sultan
-        </h1>
-        <p className="text-lg text-gray-400">AI & ML Engineer</p>
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230ea5e9'/%3E%3Ctext x='50' y='58' font-size='48' text-anchor='middle' fill='white' font-family='Arial, Helvetica, sans-serif'%3EAY%3C/text%3E%3C/svg%3E">
 
-        {/* Contact */}
-        <div className="flex gap-6 mt-4 flex-wrap justify-center">
-          <a
-            href="https://www.linkedin.com/in/ahmed-yasser-ai/"
-            target="_blank"
-            className="flex items-center gap-2 hover:text-cyan-400 transition"
-          >
-            <Linkedin size={20} /> LinkedIn
-          </a>
-          <a
-            href="mailto:ahmedyasser692004@gmail.com"
-            className="flex items-center gap-2 hover:text-cyan-400 transition"
-          >
-            <Mail size={20} /> Email
-          </a>
-          <a
-            href="tel:+201120286999"
-            className="flex items-center gap-2 hover:text-cyan-400 transition"
-          >
-            <Phone size={20} /> Phone
-          </a>
-          <a
-            href="https://drive.google.com/file/d/1QhsP2XXhF03ONG64rx8mUn0NoGS7F2Ge/view?usp=drive_link"
-            target="_blank"
-            className="flex items-center gap-2 hover:text-cyan-400 transition"
-          >
-            <FileText size={20} /> View CV
-          </a>
-        </div>
-      </header>
-
-      {/* Bio */}
-      <section className="max-w-4xl mx-auto px-6 py-12">
-        <h2 className="text-2xl font-semibold border-b-2 border-cyan-500 pb-2 mb-6">
-          About Me
-        </h2>
-        <p className="text-gray-300 leading-relaxed text-lg">
-          AI & ML Engineer with strong foundations in{" "}
-          <span className="text-cyan-400 font-medium">
-            computer engineering
-          </span>{" "}
-          and hands-on experience in{" "}
-          <span className="text-cyan-400">
-            developing and deploying machine learning models
-          </span>
-          . Skilled in deep learning, computer vision, and natural language
-          processing, with a focus on building scalable and efficient solutions.
-          Passionate about applying AI to solve real-world problems and
-          continuously improving through research and innovation.
-        </p>
-      </section>
-
-      {/* Skills */}
-      <section className="max-w-4xl mx-auto px-6 py-12">
-        <h2 className="text-2xl font-semibold border-b-2 border-cyan-500 pb-2 mb-6">
-          Skills
-        </h2>
-        <div className="grid md:grid-cols-2 gap-6 text-gray-300">
-          <ul className="list-disc list-inside">
-            <li>Python, C, C++, Java, SQL</li>
-            <li>PyTorch, TensorFlow, Transformers, OpenCV</li>
-            <li>
-              Machine Learning: Regression, Classification, Random Forest, KNN,
-              K-Means, Bagging & Boosting
-            </li>
-            <li>
-              Deep Learning: CNNs, RNNs, GNNs, GAT, VAE, Transformers
-            </li>
-          </ul>
-          <ul className="list-disc list-inside">
-            <li>Git & GitHub, Azure</li>
-            <li>Problem Solving, OOP, DSA, Databases</li>
-            <li>Signal Processing & Image Processing</li>
-            <li>
-              Soft Skills: Adaptability, Communication, Collaboration, Critical
-              Thinking
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Projects */}
-      <section className="max-w-4xl mx-auto px-6 py-12">
-        <h2 className="text-2xl font-semibold border-b-2 border-cyan-500 pb-2 mb-6">
-          Projects
-        </h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/30 transition">
-            <h3 className="text-xl font-bold text-cyan-400">
-              Relational Group Activity Recognition (ECCV 2018)
-            </h3>
-            <p className="text-gray-300 mt-2">
-              Implemented Hierarchical Relational Networks with graph attention
-              to model player interactions, achieving &gt;90% accuracy and
-              outperforming baselines.
-            </p>
-            <a
-              href="https://github.com/ahmedyasser-ai/relational-group-activity-recognition"
-              target="_blank"
-              className="text-cyan-400 hover:underline text-sm mt-3 inline-block"
-            >
-              🔗 GitHub Repo
-            </a>
-          </div>
-          <div className="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/30 transition">
-            <h3 className="text-xl font-bold text-cyan-400">
-              Group Activity Recognition (CVPR 2016)
-            </h3>
-            <p className="text-gray-300 mt-2">
-              Built ResNet + LSTM/GRU models with temporal modeling for group
-              activity recognition, achieving &gt;90% accuracy with reproducible
-              results in PyTorch.
-            </p>
-            <a
-              href="https://github.com/ahmedyasser-ai/group-activity-recognition"
-              target="_blank"
-              className="text-cyan-400 hover:underline text-sm mt-3 inline-block"
-            >
-              🔗 GitHub Repo
-            </a>
-          </div>
-          <div className="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/30 transition">
-            <h3 className="text-xl font-bold text-cyan-400">
-              AI-Powered Predictive Maintenance
-            </h3>
-            <p className="text-gray-300 mt-2">
-              Developed IoT sensor data pipelines with ML models to forecast
-              equipment failures. Deployed using scalable MLOps practices for
-              industrial reliability.
-            </p>
-            <a
-              href="https://github.com/ahmedyasser-ai/predictive-maintenance"
-              target="_blank"
-              className="text-cyan-400 hover:underline text-sm mt-3 inline-block"
-            >
-              🔗 GitHub Repo
-            </a>
-          </div>
-          <div className="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/30 transition">
-            <h3 className="text-xl font-bold text-cyan-400">
-              Credit Card Fraud Detection System
-            </h3>
-            <p className="text-gray-300 mt-2">
-              Designed end-to-end ML pipeline with ensemble models (RF, KNN, NN,
-              Voting Classifier). Achieved optimized fraud detection accuracy
-              via hyperparameter tuning.
-            </p>
-            <a
-              href="https://github.com/ahmedyasser-ai/credit-card-fraud-detection"
-              target="_blank"
-              className="text-cyan-400 hover:underline text-sm mt-3 inline-block"
-            >
-              🔗 GitHub Repo
-            </a>
-          </div>
-          <div className="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/30 transition">
-            <h3 className="text-xl font-bold text-cyan-400">
-              NYC Taxi Trip Duration Prediction
-            </h3>
-            <p className="text-gray-300 mt-2">
-              Built regression models with distance metrics & temporal
-              features. Designed preprocessing pipelines and reproducible
-              training/inference scripts.
-            </p>
-            <a
-              href="https://github.com/ahmedyasser-ai/nyc-taxi-duration"
-              target="_blank"
-              className="text-cyan-400 hover:underline text-sm mt-3 inline-block"
-            >
-              🔗 GitHub Repo
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Education */}
-      <section className="max-w-4xl mx-auto px-6 py-12">
-        <h2 className="text-2xl font-semibold border-b-2 border-cyan-500 pb-2 mb-6">
-          Education
-        </h2>
-        <p className="text-gray-300">
-          B.Sc. Computer Engineering, Faculty of Engineering, Zagazig University
-          (2022 – 2027)
-        </p>
-        <p className="text-gray-400 text-sm mt-2">
-          Relevant Coursework: Machine Learning, Artificial Intelligence, Data
-          Structures & Algorithms, Database, Operating Systems
-        </p>
-      </section>
-
-      {/* Certifications */}
-      <section className="max-w-4xl mx-auto px-6 py-12">
-        <h2 className="text-2xl font-semibold border-b-2 border-cyan-500 pb-2 mb-6">
-          Certifications & Training
-        </h2>
-        <ul className="list-disc list-inside text-gray-300">
-          <li>Artificial Intelligence (AI) Summer Training at ITI (07.2025 – 08.2025)</li>
-          <li>Microsoft Machine Learning at DEPI (06.2025 – 01.2025)</li>
-          <li>Gen AI Summer Training at ITI (08.2025 – 09.2025)</li>
-          <li>Machine Learning Diploma at CSkilled (06.2025 – 10.2025)</li>
-          <li>Deep Learning & System Design Diploma at CSkilled (10.2025 – Present)</li>
-        </ul>
-      </section>
-
-      {/* Footer */}
-      <footer className="text-center py-6 border-t border-gray-700 text-gray-400">
-        © {new Date().getFullYear()} Ahmed Yasser. All Rights Reserved.
-      </footer>
+  <style>
+    /* Keep your CSS unchanged (same as template you gave) */
+    :root {
+      --bg: #0b1020;
+      --card: #11162a;
+      --muted: #9aa7b2;
+      --text: #e6eef5;
+      --brand: #0ea5e9;
+      --accent: #22d3ee;
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+      --font: ui-sans-serif, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial;
+    }
+    * { box-sizing: border-box }
+    body { margin:0; font-family: var(--font); color: var(--text); background: var(--bg); }
+    a { color: var(--accent); text-decoration: none }
+    a:hover { text-decoration: underline }
+    .container { width:min(1100px,92%); margin:0 auto; }
+    header.nav { position:sticky; top:0; background:rgba(11,16,32,.9); border-bottom:1px solid rgba(255,255,255,.1); }
+    .nav-inner { display:flex; justify-content:space-between; align-items:center; padding:14px 0; }
+    .brand { display:flex; gap:10px; align-items:center; font-weight:700 }
+    .chip { padding:4px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.1); font-size:12px; }
+    .btn { padding:10px 16px; border-radius:var(--radius); border:1px solid rgba(255,255,255,.1); background:rgba(255,255,255,.05); font-weight:600; }
+    .btn.primary { background:rgba(14,165,233,.2); border-color:rgba(14,165,233,.4); }
+    section { padding:40px 0 }
+    h2 { font-size:26px; margin-bottom:14px }
+    .grid { display:grid; gap:20px }
+    .grid.cols-2 { grid-template-columns:1fr 1fr }
+    .grid.cols-3 { grid-template-columns:1fr 1fr 1fr }
+    @media(max-width:800px){ .grid.cols-2,.grid.cols-3{ grid-template-columns:1fr } }
+    .card, .proj, .skill, .exp, .edu, .cert, .contact { padding:18px; border-radius:var(--radius); background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08); }
+    footer { text-align:center; padding:30px 0; color:var(--muted) }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <span>Ahmed&nbsp;Yasser</span>
+        <span class="chip">AI & ML Engineer</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#certs">Certifications</a>
+        <a href="#contact">Contact</a>
+        <a class="btn primary" href="AhmedYasser_CV.pdf" target="_blank">Resume</a>
+      </nav>
     </div>
-  );
-}
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container grid cols-2">
+        <div class="card">
+          <h1>Ahmed Yasser</h1>
+          <h3>AI & ML Engineer</h3>
+          <p>Strong foundations in computer engineering with hands-on experience in developing and deploying machine learning models. Skilled in deep learning, computer vision, and NLP. Passionate about applying AI to real-world problems with scalable and efficient solutions.</p>
+          <p><b>Phone:</b> +20 1120286999<br>
+             <b>Email:</b> <a href="mailto:ahmedyasser692004@gmail.com">ahmedyasser692004@gmail.com</a><br>
+             <b>LinkedIn:</b> <a href="https://linkedin.com/ahmed-yasser-ai" target="_blank">linkedin.com/ahmed-yasser-ai</a>
+          </p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1551281044-8c5f0c3f31ab?q=80&w=800" alt="Profile">
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+        <h2>Project Experience</h2>
+        <div class="grid cols-2">
+          <div class="proj">
+            <h3>Relational Group Activity Recognition (ECCV 2018)</h3>
+            <p>Built a PyTorch implementation of Hierarchical Relational Networks with relational layers and graph attention operators. Achieved &gt;90% accuracy with temporal and attention models.</p>
+          </div>
+          <div class="proj">
+            <h3>Group Activity Recognition (CVPR 2016)</h3>
+            <p>Implemented ResNet + LSTM/GRU with temporal modeling to recognize sports activities. Achieved &gt;90% accuracy with ablation studies and end-to-end training.</p>
+          </div>
+          <div class="proj">
+            <h3>AI-Powered Predictive Maintenance</h3>
+            <p>Forecasted equipment failures using IoT sensor data with scalable ML pipelines. Deployed with MLOps practices for reliability and efficiency.</p>
+          </div>
+          <div class="proj">
+            <h3>Credit Card Fraud Detection System</h3>
+            <p>Designed full ML pipeline with data preprocessing, class balancing, and ensemble classifiers. Achieved optimized accuracy with hyperparameter tuning.</p>
+          </div>
+          <div class="proj">
+            <h3>NYC Taxi Trip Duration Prediction</h3>
+            <p>Built ML regression models using distance metrics and temporal features. Improved prediction accuracy with optimized preprocessing pipelines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="grid cols-3">
+          <div class="skill">
+            <h3>Tech Stack</h3>
+            <p>Git, GitHub, SQL, Azure, Python, C, C++, Java, PyTorch, Transformers, OpenCV</p>
+          </div>
+          <div class="skill">
+            <h3>Machine Learning</h3>
+            <p>Regression, Classification, Random Forest, KNN, K-Means, Bagging & Boosting</p>
+          </div>
+          <div class="skill">
+            <h3>Deep Learning</h3>
+            <p>CNNs, RNNs, GNNs, GAT, VAE, Transformers</p>
+          </div>
+          <div class="skill">
+            <h3>Knowledge</h3>
+            <p>Problem solving, OOP, DSA, Databases, Signal Processing, Image Processing</p>
+          </div>
+          <div class="skill">
+            <h3>Soft Skills</h3>
+            <p>Adaptability, Communication, Critical Thinking, Collaboration</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="container">
+        <h2>Experience</h2>
+        <div class="exp">
+          <h3>Freelance AI & ML Projects</h3>
+          <p>Worked on implementing ML pipelines, deploying scalable AI solutions, and contributing to academic research-level projects.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <div class="container">
+        <h2>Education</h2>
+        <div class="edu">
+          <h3>B.Sc. Computer Engineering</h3>
+          <p>Faculty of Engineering, Zagazig University (2022 - 2027)</p>
+          <p>Relevant Coursework: Machine Learning, Artificial Intelligence, Data Structures & Algorithms, Database Systems, Operating Systems</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certs">
+      <div class="container">
+        <h2>Certifications & Training</h2>
+        <div class="grid cols-2">
+          <div class="cert">Artificial Intelligence (AI) Summer Training at ITI (07.2025 - 08.2025)</div>
+          <div class="cert">Microsoft Machine Learning at DEPI (06.2025 - 01.2025)</div>
+          <div class="cert">Gen AI Summer Training at ITI (08.2025 - 09.2025)</div>
+          <div class="cert">Machine Learning Diploma at CSkilled (06.2025 - 10.2025)</div>
+          <div class="cert">Deep Learning & System Design Diploma at CSkilled (10.2025 - Present)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="contact">
+          <p>Email: <a href="mailto:ahmedyasser692004@gmail.com">ahmedyasser692004@gmail.com</a></p>
+          <p>Phone: <a href="tel:+201120286999">+20 1120286999</a></p>
+          <p>LinkedIn: <a href="https://linkedin.com/ahmed-yasser-ai" target="_blank">linkedin.com/ahmed-yasser-ai</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Ahmed Yasser. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
