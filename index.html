@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ahmed Yasser — AI & ML Engineer</title>
   <meta name="description" content="Portfolio of Ahmed Yasser, an AI & ML Engineer specializing in deep learning, computer vision, and natural language processing." />
   <meta name="theme-color" content="#0ea5e9" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Ahmed Yasser — AI & ML Engineer">
-  <meta property="og:description" content="AI, ML, DL, and Generative AI projects.">
-  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ahmed Yasser — AI & ML Engineer" />
+  <meta property="og:description" content="AI, ML, DL, and Generative AI projects." />
+  <meta property="og:type" content="website" />
 
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230ea5e9'/%3E%3Ctext x='50' y='58' font-size='48' text-anchor='middle' fill='white' font-family='Arial, Helvetica, sans-serif'%3EAY%3C/text%3E%3C/svg%3E">
 
   <style>
-    /* Keep your CSS unchanged (same as template you gave) */
     :root {
       --bg: #0b1020;
       --card: #11162a;
@@ -26,45 +25,102 @@
       --accent: #22d3ee;
       --radius: 18px;
       --shadow: 0 10px 30px rgba(0,0,0,.25);
-      --font: ui-sans-serif, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial;
+      --font: ui-sans-serif, system-ui, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", Arial;
     }
-    * { box-sizing: border-box }
-    body { margin:0; font-family: var(--font); color: var(--text); background: var(--bg); }
-    a { color: var(--accent); text-decoration: none }
-    a:hover { text-decoration: underline }
-    .container { width:min(1100px,92%); margin:0 auto; }
-    header.nav { position:sticky; top:0; background:rgba(11,16,32,.9); border-bottom:1px solid rgba(255,255,255,.1); }
-    .nav-inner { display:flex; justify-content:space-between; align-items:center; padding:14px 0; }
-    .brand { display:flex; gap:10px; align-items:center; font-weight:700 }
-    .chip { padding:4px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.1); font-size:12px; }
-    .btn { padding:10px 16px; border-radius:var(--radius); border:1px solid rgba(255,255,255,.1); background:rgba(255,255,255,.05); font-weight:600; }
-    .btn.primary { background:rgba(14,165,233,.2); border-color:rgba(14,165,233,.4); }
-    section { padding:40px 0 }
-    h2 { font-size:26px; margin-bottom:14px }
-    .grid { display:grid; gap:20px }
-    .grid.cols-2 { grid-template-columns:1fr 1fr }
-    .grid.cols-3 { grid-template-columns:1fr 1fr 1fr }
-    @media(max-width:800px){ .grid.cols-2,.grid.cols-3{ grid-template-columns:1fr } }
-    .card, .proj, .skill, .exp, .edu, .cert, .contact { padding:18px; border-radius:var(--radius); background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08); }
-    footer { text-align:center; padding:30px 0; color:var(--muted) }
+
+    * { box-sizing: border-box; }
+    html,body { height:100%; }
+    body {
+      margin:0;
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { width: min(1100px, 92%); margin: 0 auto; }
+
+    header.nav {
+      position: sticky;
+      top: 0;
+      background: rgba(11,16,32,.95);
+      border-bottom: 1px solid rgba(255,255,255,.04);
+      backdrop-filter: blur(6px);
+      z-index: 30;
+    }
+    .nav-inner { display:flex; justify-content:space-between; align-items:center; padding:14px 0; gap:12px; }
+    .brand { display:flex; gap:10px; align-items:center; font-weight:700; font-size:16px; }
+    .chip { padding:4px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.06); font-size:12px; background: rgba(255,255,255,.01); }
+
+    nav.nav-links { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+    .btn { padding:10px 16px; border-radius:var(--radius); border:1px solid rgba(255,255,255,.06); background: rgba(255,255,255,.03); font-weight:600; font-size:14px; display:inline-block; }
+    .btn.primary { background: rgba(14,165,233,.14); border-color: rgba(14,165,233,.28); color: var(--text); }
+
+    section { padding:40px 0; }
+    h1 { margin:0 0 6px 0; font-size:34px; }
+    h2 { font-size:26px; margin:0 0 14px 0; }
+    h3 { margin:0 0 8px 0; font-size:18px; }
+    p { margin:0 0 10px 0; line-height:1.5; color: var(--text); }
+
+    .grid { display:grid; gap:20px; }
+    .grid.cols-2 { grid-template-columns: 1fr 1fr; }
+    .grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+    @media(max-width: 800px) {
+      .grid.cols-2, .grid.cols-3 { grid-template-columns: 1fr; }
+      .nav-inner { flex-direction:column; align-items:flex-start; gap:8px; padding:10px 0; }
+      nav.nav-links { gap:8px; }
+    }
+
+    .card, .proj, .skill, .exp, .edu, .cert, .contact {
+      padding:18px;
+      border-radius:var(--radius);
+      background: rgba(255,255,255,.02);
+      border:1px solid rgba(255,255,255,.04);
+      box-shadow: var(--shadow);
+    }
+
+    /* Responsive image inside card */
+    .profile-img {
+      width:100%;
+      height:100%;
+      max-height:360px;
+      object-fit:cover;
+      border-radius:12px;
+      display:block;
+    }
+
+    .projects-grid { display:grid; gap:18px; grid-template-columns: 1fr; }
+    @media(min-width: 900px) { .projects-grid { grid-template-columns: 1fr 1fr; } }
+
+    footer { text-align:center; padding:30px 0; color:var(--muted); font-size:14px; }
   </style>
 </head>
 <body>
   <!-- Navbar -->
-  <header class="nav">
+  <header class="nav" role="banner">
     <div class="container nav-inner">
-      <div class="brand">
+      <div class="brand" aria-label="Brand">
         <span>Ahmed&nbsp;Yasser</span>
-        <span class="chip">AI & ML Engineer</span>
+        <span class="chip">AI &amp; ML Engineer</span>
       </div>
-      <nav class="nav-links">
+
+      <nav class="nav-links" role="navigation" aria-label="Main navigation">
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
         <a href="#certs">Certifications</a>
         <a href="#contact">Contact</a>
-        <a class="btn primary" href="https://drive.google.com/file/d/1QhsP2XXhF03ONG64rx8mUn0NoGS7F2Ge/view?usp=sharing" target="_blank">Resume</a>
+        <!-- Resume: opens Google Drive viewer in a new tab -->
+        <a class="btn primary"
+           href="https://drive.google.com/file/d/1QhsP2XXhF03ONG64rx8mUn0NoGS7F2Ge/view?usp=sharing"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Open resume in new tab">Resume</a>
       </nav>
     </div>
   </header>
@@ -75,15 +131,23 @@
       <div class="container grid cols-2">
         <div class="card">
           <h1>Ahmed Yasser</h1>
-          <h3>AI & ML Engineer</h3>
+          <h3>AI &amp; ML Engineer</h3>
           <p>Strong foundations in computer engineering with hands-on experience in developing and deploying machine learning models. Skilled in deep learning, computer vision, and NLP. Passionate about applying AI to real-world problems with scalable and efficient solutions.</p>
-          <p><b>Phone:</b> +20 1120286999<br>
-             <b>Email:</b> <a href="mailto:ahmedyasser692004@gmail.com">ahmedyasser692004@gmail.com</a><br>
-             <b>LinkedIn:</b> <a href="https://linkedin.com/ahmed-yasser-ai" target="_blank">linkedin.com/ahmed-yasser-ai</a>
+
+          <p>
+            <b>Phone:</b> <a href="tel:+201120286999" aria-label="Phone">+20 1120286999</a><br>
+            <b>Email:</b> <a href="mailto:ahmedyasser692004@gmail.com">ahmedyasser692004@gmail.com</a><br>
+            <b>LinkedIn:</b>
+            <a href="https://linkedin.com/ahmed-yasser-ai" target="_blank" rel="noopener noreferrer">linkedin.com/ahmed-yasser-ai</a>
           </p>
         </div>
-        <div class="card">
-          <img src="https://drive.google.com/uc?export=view&id=15YKK42DcRwVM91nbUy9D1EWe_xH5RgQG" alt="Ahmed Yasser Profile">
+
+        <div class="card" aria-hidden="false">
+          <!-- Profile image loaded from Google Drive (make sure file is shared to "anyone with the link") -->
+          <img
+            class="profile-img"
+            src="https://drive.google.com/uc?export=view&id=15YKK42DcRwVM91nbUy9D1EWe_xH5RgQG"
+            alt="Ahmed Yasser profile photo">
         </div>
       </div>
     </section>
@@ -92,24 +156,28 @@
     <section id="projects">
       <div class="container">
         <h2>Project Experience</h2>
-        <div class="grid cols-2">
-          <div class="proj">
+        <div class="projects-grid">
+          <div class="proj card">
             <h3>Relational Group Activity Recognition (ECCV 2018)</h3>
             <p>Built a PyTorch implementation of Hierarchical Relational Networks with relational layers and graph attention operators. Achieved &gt;90% accuracy with temporal and attention models.</p>
           </div>
-          <div class="proj">
+
+          <div class="proj card">
             <h3>Group Activity Recognition (CVPR 2016)</h3>
             <p>Implemented ResNet + LSTM/GRU with temporal modeling to recognize sports activities. Achieved &gt;90% accuracy with ablation studies and end-to-end training.</p>
           </div>
-          <div class="proj">
+
+          <div class="proj card">
             <h3>AI-Powered Predictive Maintenance</h3>
             <p>Forecasted equipment failures using IoT sensor data with scalable ML pipelines. Deployed with MLOps practices for reliability and efficiency.</p>
           </div>
-          <div class="proj">
+
+          <div class="proj card">
             <h3>Credit Card Fraud Detection System</h3>
             <p>Designed full ML pipeline with data preprocessing, class balancing, and ensemble classifiers. Achieved optimized accuracy with hyperparameter tuning.</p>
           </div>
-          <div class="proj">
+
+          <div class="proj card">
             <h3>NYC Taxi Trip Duration Prediction</h3>
             <p>Built ML regression models using distance metrics and temporal features. Improved prediction accuracy with optimized preprocessing pipelines.</p>
           </div>
@@ -122,23 +190,23 @@
       <div class="container">
         <h2>Skills</h2>
         <div class="grid cols-3">
-          <div class="skill">
+          <div class="skill card">
             <h3>Tech Stack</h3>
             <p>Git, GitHub, SQL, Azure, Python, C, C++, Java, PyTorch, Transformers, OpenCV</p>
           </div>
-          <div class="skill">
+          <div class="skill card">
             <h3>Machine Learning</h3>
-            <p>Regression, Classification, Random Forest, KNN, K-Means, Bagging & Boosting</p>
+            <p>Regression, Classification, Random Forest, KNN, K-Means, Bagging &amp; Boosting</p>
           </div>
-          <div class="skill">
+          <div class="skill card">
             <h3>Deep Learning</h3>
             <p>CNNs, RNNs, GNNs, GAT, VAE, Transformers</p>
           </div>
-          <div class="skill">
+          <div class="skill card">
             <h3>Knowledge</h3>
             <p>Problem solving, OOP, DSA, Databases, Signal Processing, Image Processing</p>
           </div>
-          <div class="skill">
+          <div class="skill card">
             <h3>Soft Skills</h3>
             <p>Adaptability, Communication, Critical Thinking, Collaboration</p>
           </div>
@@ -150,8 +218,8 @@
     <section id="experience">
       <div class="container">
         <h2>Experience</h2>
-        <div class="exp">
-          <h3>Freelance AI & ML Projects</h3>
+        <div class="exp card">
+          <h3>Freelance AI &amp; ML Projects</h3>
           <p>Worked on implementing ML pipelines, deploying scalable AI solutions, and contributing to academic research-level projects.</p>
         </div>
       </div>
@@ -161,10 +229,10 @@
     <section id="education">
       <div class="container">
         <h2>Education</h2>
-        <div class="edu">
+        <div class="edu card">
           <h3>B.Sc. Computer Engineering</h3>
           <p>Faculty of Engineering, Zagazig University (2022 - 2027)</p>
-          <p>Relevant Coursework: Machine Learning, Artificial Intelligence, Data Structures & Algorithms, Database Systems, Operating Systems</p>
+          <p>Relevant Coursework: Machine Learning, Artificial Intelligence, Data Structures &amp; Algorithms, Database Systems, Operating Systems</p>
         </div>
       </div>
     </section>
@@ -172,13 +240,13 @@
     <!-- Certifications -->
     <section id="certs">
       <div class="container">
-        <h2>Certifications & Training</h2>
+        <h2>Certifications &amp; Training</h2>
         <div class="grid cols-2">
-          <div class="cert">Artificial Intelligence (AI) Summer Training at ITI (07.2025 - 08.2025)</div>
-          <div class="cert">Microsoft Machine Learning at DEPI (06.2025 - 01.2025)</div>
-          <div class="cert">Gen AI Summer Training at ITI (08.2025 - 09.2025)</div>
-          <div class="cert">Machine Learning Diploma at CSkilled (06.2025 - 10.2025)</div>
-          <div class="cert">Deep Learning & System Design Diploma at CSkilled (10.2025 - Present)</div>
+          <div class="cert card">Artificial Intelligence (AI) Summer Training at ITI (07.2025 - 08.2025)</div>
+          <div class="cert card">Microsoft Machine Learning at DEPI (06.2025 - 01.2025)</div>
+          <div class="cert card">Gen AI Summer Training at ITI (08.2025 - 09.2025)</div>
+          <div class="cert card">Machine Learning Diploma at CSkilled (06.2025 - 10.2025)</div>
+          <div class="cert card">Deep Learning &amp; System Design Diploma at CSkilled (10.2025 - Present)</div>
         </div>
       </div>
     </section>
@@ -187,10 +255,10 @@
     <section id="contact">
       <div class="container">
         <h2>Contact</h2>
-        <div class="contact">
+        <div class="contact card">
           <p>Email: <a href="mailto:ahmedyasser692004@gmail.com">ahmedyasser692004@gmail.com</a></p>
           <p>Phone: <a href="tel:+201120286999">+20 1120286999</a></p>
-          <p>LinkedIn: <a href="https://linkedin.com/ahmed-yasser-ai" target="_blank">linkedin.com/ahmed-yasser-ai</a></p>
+          <p>LinkedIn: <a href="https://linkedin.com/ahmed-yasser-ai" target="_blank" rel="noopener noreferrer">linkedin.com/ahmed-yasser-ai</a></p>
         </div>
       </div>
     </section>
@@ -201,6 +269,7 @@
   </footer>
 
   <script>
+    // set current year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
