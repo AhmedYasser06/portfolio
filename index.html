@@ -17,8 +17,8 @@
     <div class="prompt"><span class="sym">&gt;</span> cd <span class="path">~/ahmed-yasser</span> <span class="cursor"></span></div>
     <div class="nav-links">
       <a href="#top">Home</a>
-      <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
       <a class="btn btn-primary" href="assets/resume/Ahmed_Yasser_Resume.pdf" download>Resume ↗</a>
@@ -36,7 +36,7 @@
     </div>
 
     <h1>Hi, I'm <span class="grad-text">Ahmed Yasser</span> 👋</h1>
-    <div class="role-line"><span>AI Engineer</span><span class="sep">|</span><span>Computer Vision Engineer</span><span class="sep">|</span><span>LLM / Data Engineer</span></div>
+    <div class="role-line"><span>AI Engineer</span><span class="sep">|</span><span>Computer Vision Engineer</span></div>
     <p class="lead">A Machine Learning Engineer with a Computer Engineering foundation, specializing in Computer Vision, NLP, and Large Language Models. I build detection, tracking and multi-agent systems — and I like reproducing research papers until the numbers beat the paper.</p>
 
     <div class="social-row">
@@ -61,10 +61,26 @@
 
 <div class="stats wrap">
   <div class="stats-grid">
-    <div class="stat"><b>7+</b><span>Shipped CV/DL projects</span></div>
-    <div class="stat"><b>92.0%</b><span>Peak relational-GAR accuracy</span></div>
-    <div class="stat"><b>Top 5/320</b><span>Anti-Drone ITC Egypt ADC</span></div>
-    <div class="stat"><b>96.0%</b><span>Predictive-maintenance accuracy</span></div>
+    <div class="stat">
+      <span class="stat-ico">🏆</span>
+      <b>Top 5 <small>/ 320</small></b>
+      <span>National Anti-Drone Defense Competition</span>
+    </div>
+    <div class="stat">
+      <span class="stat-ico">🎯</span>
+      <b>Beat the Paper</b>
+      <span>92% accuracy — past the published baseline</span>
+    </div>
+    <div class="stat">
+      <span class="stat-ico">⚙️</span>
+      <b>Production-Ready</b>
+      <span>96% accuracy predicting failures 24h early</span>
+    </div>
+    <div class="stat">
+      <span class="stat-ico">🚀</span>
+      <b>7+ Systems Shipped</b>
+      <span>From research repro to deployed AI</span>
+    </div>
   </div>
 </div>
 
@@ -100,9 +116,13 @@
       <h2>Where I've been building.</h2>
     </div>
     <div class="exp-card reveal">
-      <div class="exp-head">
-        <h3>AI &amp; Data Science Engineer — DEPI</h3>
-        <span class="period">Jun 2025 – Jan 2026</span>
+      <div class="exp-top">
+        <img class="exp-logo" src="images/depi-logo.jpg" alt="DEPI logo">
+        <div class="exp-head">
+          <h3>AI &amp; Data Science Engineer — DEPI</h3>
+          <span class="period">Jun 2025 – Jan 2026</span>
+        </div>
+        <img class="exp-photo" src="images/me.jpeg" alt="Ahmed Yasser">
       </div>
       <ul>
         <li>Deployed ML/DL models for predictive analytics, integrating them into automated production workflows.</li>
@@ -123,6 +143,7 @@
 
     <div class="flagship reveal">
       <span class="tag-chip">★ Top 5 of 320 teams · ITC Egypt ADC 2026</span>
+      <img class="flagship-img" src="images/anti-drone.png" alt="Multi-Layer Anti-Drone Defense System — live detection and tracking HUD">
       <h3>Real-time, sensor-fused counter-UAS platform</h3>
       <ul>
         <li>Dual-model YOLOv8 detection running concurrently on RGB and thermal feeds, geometrically fused via calibrated similarity-transform alignment for higher-confidence threat detection than either sensor alone.</li>
@@ -153,6 +174,7 @@
     <div class="proj-grid">
 
       <div class="proj-card reveal" style="--accent:var(--r);">
+        <img class="proj-thumb" src="images/courseta.png" alt="CourseTA agentic platform mascot">
         <div class="proj-id"><span>PROJ_01 · AGENTIC PLATFORM</span><span class="conf">RAG</span></div>
         <h3>CourseTA — Agentic Educational Content Platform</h3>
         <p>Multi-agent system with specialized agents for question generation, summarization, and feedback-driven refinement, plus a RAG pipeline over course materials with async FastAPI microservices, Whisper transcription, and PyMuPDF parsing.</p>
@@ -163,6 +185,7 @@
       </div>
 
       <div class="proj-card reveal" style="--accent:var(--g);">
+        <img class="proj-thumb" src="images/relational-gar.png" alt="Hierarchical Relational Network architecture diagram">
         <div class="proj-id"><span>PROJ_02 · ECCV 2018 REPRO</span><span class="conf">conf 0.92</span></div>
         <h3>Relational Group Activity Recognition</h3>
         <p>Re-implemented a Hierarchical Relational Network on 4,830 frames from 55 videos via a custom Graph Relational Layer — 91.55% test accuracy, pushed to 92.00% by adding a Graph Attention (GAT) mechanism with test-time augmentation.</p>
@@ -173,6 +196,7 @@
       </div>
 
       <div class="proj-card reveal" style="--accent:var(--b);">
+        <img class="proj-thumb" src="images/group-activity-recognition.png" alt="Hierarchical Temporal Deep Model with Group and Person LSTMs">
         <div class="proj-id"><span>PROJ_03 · CVPR 2016 REPRO</span><span class="conf">conf 0.93</span></div>
         <h3>Group Activity Recognition</h3>
         <p>Hierarchical Temporal Deep Model with a two-stage LSTM to capture multi-person temporal dynamics — 93% accuracy on benchmark data, with ablations isolating each component against 8 baseline models.</p>
@@ -183,6 +207,7 @@
       </div>
 
       <div class="proj-card reveal" style="--accent:var(--v);">
+        <img class="proj-thumb" src="images/multinet-architecture.png" alt="MultiCheXNet multi-task architecture: detection, classification, segmentation decoders">
         <div class="proj-id"><span>PROJ_04 · MEDICAL IMAGING</span><span class="conf">multi-task</span></div>
         <h3>Multi-Task Chest X-Ray Analysis</h3>
         <p>MultiCheXNet: a multi-task DenseNet-121 performing simultaneous classification, detection, and segmentation through a shared encoder, trained across datasets with mismatched label schemas via a custom dataloader.</p>
@@ -193,6 +218,7 @@
       </div>
 
       <div class="proj-card reveal" style="--accent:var(--amber);">
+        <img class="proj-thumb" src="images/urban-segmentation.png" alt="DeepLabV3+ urban scene segmentation: original, ground truth, prediction">
         <div class="proj-id"><span>PROJ_05 · SEGMENTATION</span><span class="conf">mIoU 0.59</span></div>
         <h3>Urban Scene Segmentation</h3>
         <p>Three progressively stronger baselines — U-Net → improved U-Net → DeepLabV3+ with ASPP — on CamVid across 12 classes, taking mean IoU from 0.34 to 0.59 via Dice+CrossEntropy loss and mixed-precision training.</p>
@@ -215,6 +241,7 @@
     </div>
 
     <div class="proj-card reveal" style="--accent:var(--g); margin-top:22px;">
+      <img class="proj-thumb" src="images/credit-card-fraud.png" alt="Model performance comparison heatmap for fraud detection">
       <div class="proj-id"><span>PROJ_07 · IMBALANCED DATA</span><span class="conf">F1 0.86</span></div>
       <h3>Credit Card Fraud Detection</h3>
       <p>Tackled extreme class imbalance on 284,807 transactions with a voting-classifier ensemble and a focal-loss-enhanced PyTorch network — 86% F1, 85% PR-AUC, outperforming standard classifiers on rare-event detection.</p>
@@ -294,7 +321,7 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="cmd"><span class="p1">$</span><span class="p2">cat education.md</span></div>
-      <h2>Foundation.</h2>
+      <h2>Education.</h2>
     </div>
     <div class="edu-card reveal">
       <span class="period">2022 – 2027</span>
