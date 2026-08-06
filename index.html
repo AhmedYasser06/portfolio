@@ -21,7 +21,9 @@
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
-      <a class="btn btn-primary" href="assets/resume/Ahmed_Yasser_Resume.pdf" download>Resume ↗</a>
+      <a href="#competitions">Competitions</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-primary" href="https://drive.google.com/drive/folders/1sWdsWgfH8F1R8W5kIUo87l7skIa03Iet" target="_blank" rel="noopener">Resume ↗</a>
     </div>
   </div>
 </nav>
@@ -30,7 +32,7 @@
   <div class="wrap">
     <div class="avatar-wrap">
       <div class="avatar-ring">
-        <div class="avatar-inner"><span class="avatar-mono">AY</span></div>
+        <div class="avatar-inner"><img class="avatar-photo" src="images/me-avatar.jpg" alt="Ahmed Yasser"></div>
       </div>
       <span class="avatar-tag">id: ahmed_yasser</span>
     </div>
@@ -53,7 +55,7 @@
 
     <div class="hero-actions">
       <a class="btn btn-primary" href="#projects">Projects</a>
-      <a class="btn btn-ghost" href="assets/resume/Ahmed_Yasser_Resume.pdf" download>Resume ↗</a>
+      <a class="btn btn-ghost" href="https://drive.google.com/drive/folders/1sWdsWgfH8F1R8W5kIUo87l7skIa03Iet" target="_blank" rel="noopener">Resume ↗</a>
       <a class="btn btn-ghost" href="#contact">Contact</a>
     </div>
   </div>
@@ -62,22 +64,18 @@
 <div class="stats wrap">
   <div class="stats-grid">
     <div class="stat">
-      <span class="stat-ico">🏆</span>
       <b>Top 5 <small>/ 320</small></b>
       <span>National Anti-Drone Defense Competition</span>
     </div>
     <div class="stat">
-      <span class="stat-ico">🎯</span>
       <b>Beat the Paper</b>
       <span>92% accuracy — past the published baseline</span>
     </div>
     <div class="stat">
-      <span class="stat-ico">⚙️</span>
       <b>Production-Ready</b>
       <span>96% accuracy predicting failures 24h early</span>
     </div>
     <div class="stat">
-      <span class="stat-ico">🚀</span>
       <b>7+ Systems Shipped</b>
       <span>From research repro to deployed AI</span>
     </div>
@@ -174,7 +172,7 @@
     <div class="proj-grid">
 
       <div class="proj-card reveal" style="--accent:var(--r);">
-        <img class="proj-thumb" src="images/courseta.png" alt="CourseTA agentic platform mascot">
+        <div class="proj-thumb-wrap"><img class="proj-thumb" src="images/courseta.png" alt="CourseTA agentic platform mascot"></div>
         <div class="proj-id"><span>PROJ_01 · AGENTIC PLATFORM</span><span class="conf">RAG</span></div>
         <h3>CourseTA — Agentic Educational Content Platform</h3>
         <p>Multi-agent system with specialized agents for question generation, summarization, and feedback-driven refinement, plus a RAG pipeline over course materials with async FastAPI microservices, Whisper transcription, and PyMuPDF parsing.</p>
@@ -185,7 +183,7 @@
       </div>
 
       <div class="proj-card reveal" style="--accent:var(--g);">
-        <img class="proj-thumb" src="images/relational-gar.png" alt="Hierarchical Relational Network architecture diagram">
+        <div class="proj-thumb-wrap"><img class="proj-thumb" src="images/relational-gar.png" alt="Hierarchical Relational Network architecture diagram"></div>
         <div class="proj-id"><span>PROJ_02 · ECCV 2018 REPRO</span><span class="conf">conf 0.92</span></div>
         <h3>Relational Group Activity Recognition</h3>
         <p>Re-implemented a Hierarchical Relational Network on 4,830 frames from 55 videos via a custom Graph Relational Layer — 91.55% test accuracy, pushed to 92.00% by adding a Graph Attention (GAT) mechanism with test-time augmentation.</p>
@@ -196,7 +194,7 @@
       </div>
 
       <div class="proj-card reveal" style="--accent:var(--b);">
-        <img class="proj-thumb" src="images/group-activity-recognition.png" alt="Hierarchical Temporal Deep Model with Group and Person LSTMs">
+        <div class="proj-thumb-wrap"><img class="proj-thumb" src="images/group-activity-recognition.png" alt="Hierarchical Temporal Deep Model with Group and Person LSTMs"></div>
         <div class="proj-id"><span>PROJ_03 · CVPR 2016 REPRO</span><span class="conf">conf 0.93</span></div>
         <h3>Group Activity Recognition</h3>
         <p>Hierarchical Temporal Deep Model with a two-stage LSTM to capture multi-person temporal dynamics — 93% accuracy on benchmark data, with ablations isolating each component against 8 baseline models.</p>
@@ -207,7 +205,7 @@
       </div>
 
       <div class="proj-card reveal" style="--accent:var(--v);">
-        <img class="proj-thumb" src="images/multinet-architecture.png" alt="MultiCheXNet multi-task architecture: detection, classification, segmentation decoders">
+        <div class="proj-thumb-wrap"><img class="proj-thumb" src="images/multinet-architecture.png" alt="MultiCheXNet multi-task architecture: detection, classification, segmentation decoders"></div>
         <div class="proj-id"><span>PROJ_04 · MEDICAL IMAGING</span><span class="conf">multi-task</span></div>
         <h3>Multi-Task Chest X-Ray Analysis</h3>
         <p>MultiCheXNet: a multi-task DenseNet-121 performing simultaneous classification, detection, and segmentation through a shared encoder, trained across datasets with mismatched label schemas via a custom dataloader.</p>
@@ -218,7 +216,7 @@
       </div>
 
       <div class="proj-card reveal" style="--accent:var(--amber);">
-        <img class="proj-thumb" src="images/urban-segmentation.png" alt="DeepLabV3+ urban scene segmentation: original, ground truth, prediction">
+        <div class="proj-thumb-wrap"><img class="proj-thumb" src="images/urban-segmentation.png" alt="DeepLabV3+ urban scene segmentation: original, ground truth, prediction"></div>
         <div class="proj-id"><span>PROJ_05 · SEGMENTATION</span><span class="conf">mIoU 0.59</span></div>
         <h3>Urban Scene Segmentation</h3>
         <p>Three progressively stronger baselines — U-Net → improved U-Net → DeepLabV3+ with ASPP — on CamVid across 12 classes, taking mean IoU from 0.34 to 0.59 via Dice+CrossEntropy loss and mixed-precision training.</p>
@@ -229,6 +227,7 @@
       </div>
 
       <div class="proj-card reveal" style="--accent:var(--r);">
+        <div class="proj-thumb-wrap proj-thumb-placeholder"><span>PROJ_06 · NO PREVIEW</span></div>
         <div class="proj-id"><span>PROJ_06 · MLOPS</span><span class="conf">recall 0.847</span></div>
         <h3>AI-Powered Predictive Maintenance</h3>
         <p>Failure-forecasting system across 10+ sensors predicting equipment failures 24 hours in advance — 84.7% recall, 96% accuracy, tuned to minimize false alerts and deployed via containerized MLOps workflows.</p>
@@ -238,17 +237,17 @@
         <a class="proj-link" href="https://github.com/AhmedYasser06" target="_blank" rel="noopener">GitHub</a>
       </div>
 
-    </div>
-
-    <div class="proj-card reveal" style="--accent:var(--g); margin-top:22px;">
-      <img class="proj-thumb" src="images/credit-card-fraud.png" alt="Model performance comparison heatmap for fraud detection">
-      <div class="proj-id"><span>PROJ_07 · IMBALANCED DATA</span><span class="conf">F1 0.86</span></div>
-      <h3>Credit Card Fraud Detection</h3>
-      <p>Tackled extreme class imbalance on 284,807 transactions with a voting-classifier ensemble and a focal-loss-enhanced PyTorch network — 86% F1, 85% PR-AUC, outperforming standard classifiers on rare-event detection.</p>
-      <div class="stack-row">
-        <span class="stack-tag">PyTorch</span><span class="stack-tag">Focal Loss</span><span class="stack-tag">Ensemble</span>
+      <div class="proj-card reveal" style="--accent:var(--g);">
+        <div class="proj-thumb-wrap"><img class="proj-thumb" src="images/credit-card-fraud.png" alt="Model performance comparison heatmap for fraud detection"></div>
+        <div class="proj-id"><span>PROJ_07 · IMBALANCED DATA</span><span class="conf">F1 0.86</span></div>
+        <h3>Credit Card Fraud Detection</h3>
+        <p>Tackled extreme class imbalance on 284,807 transactions with a voting-classifier ensemble and a focal-loss-enhanced PyTorch network — 86% F1, 85% PR-AUC, outperforming standard classifiers on rare-event detection.</p>
+        <div class="stack-row">
+          <span class="stack-tag">PyTorch</span><span class="stack-tag">Focal Loss</span><span class="stack-tag">Ensemble</span>
+        </div>
+        <a class="proj-link" href="https://github.com/AhmedYasser06" target="_blank" rel="noopener">GitHub</a>
       </div>
-      <a class="proj-link" href="https://github.com/AhmedYasser06" target="_blank" rel="noopener">GitHub</a>
+
     </div>
   </div>
 </section>
@@ -257,7 +256,7 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="cmd"><span class="p1">$</span><span class="p2">cat skills.json | jq</span></div>
-      <h2>Toolkit.</h2>
+      <h2>Skills.</h2>
     </div>
     <div class="skills-grid">
       <div class="skill-block reveal" style="--accent:var(--r);">
@@ -300,7 +299,7 @@
   </div>
 </section>
 
-<section>
+<section id="competitions">
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="cmd"><span class="p1">$</span><span class="p2">./run competition.sh --result</span></div>
@@ -351,16 +350,16 @@
       <div class="edu-card" style="margin-bottom:0;">
         <h3 style="margin-top:0;">Diplomas &amp; Programs</h3>
         <ul class="cert-list">
-          <li><b>Deep Learning and System Design Diploma</b> — CSkilled</li>
-          <li><b>Machine Learning Diploma</b> — CSkilled</li>
-          <li><b>Microsoft Machine Learning</b> — DEPI</li>
+          <li><a href="https://drive.google.com/drive/folders/114sDX4LJx3FmTWEzy3yC5dh38-hBZxpn" target="_blank" rel="noopener"><b>Deep Learning and System Design Diploma</b> — CSkilled <span class="cert-go">↗</span></a></li>
+          <li><a href="https://drive.google.com/drive/folders/114sDX4LJx3FmTWEzy3yC5dh38-hBZxpn" target="_blank" rel="noopener"><b>Machine Learning Diploma</b> — CSkilled <span class="cert-go">↗</span></a></li>
+          <li><a href="https://drive.google.com/drive/folders/114sDX4LJx3FmTWEzy3yC5dh38-hBZxpn" target="_blank" rel="noopener"><b>Microsoft Machine Learning</b> — DEPI <span class="cert-go">↗</span></a></li>
         </ul>
       </div>
       <div class="edu-card" style="margin-bottom:0;">
         <h3 style="margin-top:0;">Summer Training</h3>
         <ul class="cert-list">
-          <li><b>Generative AI Summer Training</b> — ITI</li>
-          <li><b>AI Summer Training</b> — ITI</li>
+          <li><a href="https://drive.google.com/drive/folders/114sDX4LJx3FmTWEzy3yC5dh38-hBZxpn" target="_blank" rel="noopener"><b>Generative AI Summer Training</b> — ITI <span class="cert-go">↗</span></a></li>
+          <li><a href="https://drive.google.com/drive/folders/114sDX4LJx3FmTWEzy3yC5dh38-hBZxpn" target="_blank" rel="noopener"><b>AI Summer Training</b> — ITI <span class="cert-go">↗</span></a></li>
         </ul>
       </div>
     </div>
