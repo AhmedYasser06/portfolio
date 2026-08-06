@@ -135,45 +135,27 @@
 <section id="projects">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="cmd"><span class="p1">$</span><span class="p2">./run flagship_project.sh</span></div>
-      <h2>Multi-Layer Anti-Drone Defense System</h2>
-    </div>
-
-    <div class="flagship reveal">
-      <span class="tag-chip">★ Top 5 of 320 teams · ITC Egypt ADC 2026</span>
-      <img class="flagship-img" src="images/anti-drone.png" alt="Multi-Layer Anti-Drone Defense System — live detection and tracking HUD">
-      <h3>Real-time, sensor-fused counter-UAS platform</h3>
-      <ul>
-        <li>Dual-model YOLOv8 detection running concurrently on RGB and thermal feeds, geometrically fused via calibrated similarity-transform alignment for higher-confidence threat detection than either sensor alone.</li>
-        <li>A novel NMSE-based threat-prioritization engine scoring every live track on distance, closing speed, confidence, and size — to decide which target to engage first.</li>
-        <li>Full PID visual servoing with anti-windup for gimbal control, plus an optional tabular Q-learning agent that adaptively tunes controller gains online while keeping engagement decisions deterministic and auditable.</li>
-        <li>Compute split from actuation: a laptop handles inference, fusion, tracking, and control, while an Arduino drives servos, radar sweep, and jammer relay — no Raspberry Pi required.</li>
-      </ul>
-      <div class="stack-row">
-        <span class="stack-tag">Python</span><span class="stack-tag">YOLOv8</span><span class="stack-tag">Deep SORT</span>
-        <span class="stack-tag">OpenCV</span><span class="stack-tag">PID Control</span><span class="stack-tag">Q-Learning (RL)</span>
-        <span class="stack-tag">Arduino</span><span class="stack-tag">Sensor Fusion</span>
-      </div>
-      <div style="margin-top:24px;">
-        <a class="proj-link" style="color:var(--amber)" href="https://github.com/AhmedYasser06" target="_blank" rel="noopener">View on GitHub</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="sec-head reveal">
       <div class="cmd"><span class="p1">$</span><span class="p2">ls ./projects --sort=confidence</span></div>
-      <h2>Other things I've built and reproduced.</h2>
+      <h2>Things I've built and reproduced.</h2>
       <p>A mix of production systems and from-scratch paper reproductions — each tagged with its live confidence, i.e. the reported result.</p>
     </div>
 
     <div class="proj-grid">
 
+      <div class="proj-card reveal" style="--accent:var(--amber);">
+        <div class="proj-thumb-wrap"><img class="proj-thumb" src="images/anti-drone.png" alt="Multi-Layer Anti-Drone Defense System — live detection and tracking HUD"></div>
+        <div class="proj-id"><span>PROJ_01 · FLAGSHIP · COUNTER-UAS</span><span class="conf">Top 5/320</span></div>
+        <h3>Multi-Layer Anti-Drone Defense System</h3>
+        <p>Real-time, sensor-fused counter-UAS platform: dual YOLOv8 detection across RGB + thermal feeds fused via calibrated similarity-transform alignment, an NMSE-based threat-prioritization engine, and full PID visual servoing with an optional online Q-learning tuner. Ranked Top 5 of 320 teams at ITC Egypt ADC 2026.</p>
+        <div class="stack-row">
+          <span class="stack-tag">YOLOv8</span><span class="stack-tag">Deep SORT</span><span class="stack-tag">PID Control</span><span class="stack-tag">Q-Learning</span><span class="stack-tag">Arduino</span>
+        </div>
+        <a class="proj-link" href="https://github.com/AhmedYasser06" target="_blank" rel="noopener">GitHub</a>
+      </div>
+
       <div class="proj-card reveal" style="--accent:var(--r);">
         <div class="proj-thumb-wrap"><img class="proj-thumb" src="images/courseta.png" alt="CourseTA agentic platform mascot"></div>
-        <div class="proj-id"><span>PROJ_01 · AGENTIC PLATFORM</span><span class="conf">RAG</span></div>
+        <div class="proj-id"><span>PROJ_02 · AGENTIC PLATFORM</span><span class="conf">RAG</span></div>
         <h3>CourseTA — Agentic Educational Content Platform</h3>
         <p>Multi-agent system with specialized agents for question generation, summarization, and feedback-driven refinement, plus a RAG pipeline over course materials with async FastAPI microservices, Whisper transcription, and PyMuPDF parsing.</p>
         <div class="stack-row">
@@ -184,7 +166,7 @@
 
       <div class="proj-card reveal" style="--accent:var(--g);">
         <div class="proj-thumb-wrap"><img class="proj-thumb" src="images/relational-gar.png" alt="Hierarchical Relational Network architecture diagram"></div>
-        <div class="proj-id"><span>PROJ_02 · ECCV 2018 REPRO</span><span class="conf">conf 0.92</span></div>
+        <div class="proj-id"><span>PROJ_03 · ECCV 2018 REPRO</span><span class="conf">conf 0.92</span></div>
         <h3>Relational Group Activity Recognition</h3>
         <p>Re-implemented a Hierarchical Relational Network on 4,830 frames from 55 videos via a custom Graph Relational Layer — 91.55% test accuracy, pushed to 92.00% by adding a Graph Attention (GAT) mechanism with test-time augmentation.</p>
         <div class="stack-row">
@@ -195,22 +177,11 @@
 
       <div class="proj-card reveal" style="--accent:var(--b);">
         <div class="proj-thumb-wrap"><img class="proj-thumb" src="images/group-activity-recognition.png" alt="Hierarchical Temporal Deep Model with Group and Person LSTMs"></div>
-        <div class="proj-id"><span>PROJ_03 · CVPR 2016 REPRO</span><span class="conf">conf 0.93</span></div>
+        <div class="proj-id"><span>PROJ_04 · CVPR 2016 REPRO</span><span class="conf">conf 0.93</span></div>
         <h3>Group Activity Recognition</h3>
         <p>Hierarchical Temporal Deep Model with a two-stage LSTM to capture multi-person temporal dynamics — 93% accuracy on benchmark data, with ablations isolating each component against 8 baseline models.</p>
         <div class="stack-row">
           <span class="stack-tag">PyTorch</span><span class="stack-tag">Two-Stage LSTM</span>
-        </div>
-        <a class="proj-link" href="https://github.com/AhmedYasser06" target="_blank" rel="noopener">GitHub</a>
-      </div>
-
-      <div class="proj-card reveal" style="--accent:var(--v);">
-        <div class="proj-thumb-wrap"><img class="proj-thumb" src="images/multinet-architecture.png" alt="MultiCheXNet multi-task architecture: detection, classification, segmentation decoders"></div>
-        <div class="proj-id"><span>PROJ_04 · MEDICAL IMAGING</span><span class="conf">multi-task</span></div>
-        <h3>Multi-Task Chest X-Ray Analysis</h3>
-        <p>MultiCheXNet: a multi-task DenseNet-121 performing simultaneous classification, detection, and segmentation through a shared encoder, trained across datasets with mismatched label schemas via a custom dataloader.</p>
-        <div class="stack-row">
-          <span class="stack-tag">PyTorch</span><span class="stack-tag">DenseNet-121</span>
         </div>
         <a class="proj-link" href="https://github.com/AhmedYasser06" target="_blank" rel="noopener">GitHub</a>
       </div>
@@ -237,9 +208,20 @@
         <a class="proj-link" href="https://github.com/AhmedYasser06" target="_blank" rel="noopener">GitHub</a>
       </div>
 
+      <div class="proj-card reveal" style="--accent:var(--v);">
+        <div class="proj-thumb-wrap"><img class="proj-thumb" src="images/multinet-architecture.png" alt="MultiCheXNet multi-task architecture: detection, classification, segmentation decoders"></div>
+        <div class="proj-id"><span>PROJ_07 · MEDICAL IMAGING</span><span class="conf">multi-task</span></div>
+        <h3>Multi-Task Chest X-Ray Analysis</h3>
+        <p>MultiCheXNet: a multi-task DenseNet-121 performing simultaneous classification, detection, and segmentation through a shared encoder, trained across datasets with mismatched label schemas via a custom dataloader.</p>
+        <div class="stack-row">
+          <span class="stack-tag">PyTorch</span><span class="stack-tag">DenseNet-121</span>
+        </div>
+        <a class="proj-link" href="https://github.com/AhmedYasser06" target="_blank" rel="noopener">GitHub</a>
+      </div>
+
       <div class="proj-card reveal" style="--accent:var(--g);">
         <div class="proj-thumb-wrap"><img class="proj-thumb" src="images/credit-card-fraud.png" alt="Model performance comparison heatmap for fraud detection"></div>
-        <div class="proj-id"><span>PROJ_07 · IMBALANCED DATA</span><span class="conf">F1 0.86</span></div>
+        <div class="proj-id"><span>PROJ_08 · IMBALANCED DATA</span><span class="conf">F1 0.86</span></div>
         <h3>Credit Card Fraud Detection</h3>
         <p>Tackled extreme class imbalance on 284,807 transactions with a voting-classifier ensemble and a focal-loss-enhanced PyTorch network — 86% F1, 85% PR-AUC, outperforming standard classifiers on rare-event detection.</p>
         <div class="stack-row">
