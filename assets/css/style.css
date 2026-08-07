@@ -104,7 +104,7 @@
   /* ---------- hero ---------- */
   .hero{padding:100px 0 70px; text-align:center;}
   .avatar-wrap{
-    position:relative; width:176px; height:176px; margin:0 auto 30px;
+    position:relative; width:280px; height:280px; margin: 0 auto 30px;
   }
   .avatar-ring{
     position:absolute; inset:0; border-radius:50%;
