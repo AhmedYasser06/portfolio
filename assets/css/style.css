@@ -109,7 +109,6 @@
   .avatar-ring{
     position:absolute; inset:0; border-radius:50%;
     background:conic-gradient(from 0deg, var(--r), var(--v), var(--b), var(--g), var(--r));
-    animation:spin 8s linear infinite;
     padding:4px;
   }
   @keyframes spin{ to{ transform:rotate(360deg); } }
